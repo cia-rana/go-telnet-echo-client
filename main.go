@@ -35,6 +35,7 @@ func (c caller) CallTELNET(ctx telnet.Context, w telnet.Writer, r telnet.Reader)
 
 	// Write to telnet server
 	readBlocker := make(chan struct{}, 1)
+	defer close(readBlocker)
 	go func() {
 		for {
 			switch ev := termbox.PollEvent(); ev.Type {
