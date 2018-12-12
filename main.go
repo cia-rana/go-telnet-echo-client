@@ -11,8 +11,8 @@ import (
 )
 
 func main() {
-	host := flag.String("h", "localhost", "host")
-	port := flag.String("p", "23", "port")
+	host := flag.String("host", "localhost", "host")
+	port := flag.String("port", "23", "port")
 	flag.Parse()
 
 	// Init termbox to use the getchar
