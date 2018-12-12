@@ -19,6 +19,7 @@ func main() {
 	if err := termbox.Init(); err != nil {
 		panic(err)
 	}
+	defer termbox.Close()
 	termbox.SetCursor(0, 0)
 	termbox.HideCursor()
 
